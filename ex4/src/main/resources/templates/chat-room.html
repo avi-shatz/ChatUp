@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <!-- icons -->
+    <link rel="icon" href="/images/big_logo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+
+    <!-- CSS file -->
+    <link href="/css/chat-room.css" rel="stylesheet">
+    <!-- JS file -->
+    <script src="/js/common-util.js"></script>
+    <script src="/js/chat.js"></script>
+
+    <title>ChatUp - chat room</title>
+</head>
+<body>
+
+<div class="main-background container-fluid p-3 m-0">
+
+    <!-- Welcome -->
+    <div class="row p-3 text-center">
+        <div class="col-sm-12 title_welcome p-3">
+            <div class="row">
+                <div class="col col-lg-8 offset-lg-2  d-flex align-items-center justify-content-center">
+                    <h1>Welcome to ChatUp</h1>
+                </div>
+
+                <div class="col col-lg-2">
+                    <p>Hi <span id="user-name" th:text="${userName}"></span></p>
+                    <a class="logout" href="/logout">Logout
+                        <i class="fa fa-sign-out"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+            <!--Search Button-->
+            <div class="first_row row p-3 text-center">
+                <div class="col">
+                    <a href="/search-page" class="btn btn-lg btn-primary">Search Messages
+                        <i class="fa fa-search"></i></a>
+                </div>
+            </div>
+
+            <!--Chat and Users-->
+            <div class="second_row row p-3">
+                <!-- Chat -->
+                <div class="col-lg-8 chat_section mt-4">
+                    <!-- messages -->
+                    <div class="row">
+                        <div class="messages justify-content-center" id="chat-field">
+
+                        </div>
+                    </div>
+
+                    <!-- textarea Send -->
+                    <div class="row mb-3 mt-5">
+                        <form class="row col-12" id="message-form" action="/send-message" method="post">
+                            <input type="text" id="userName" name="userName" th:value="${userName}" hidden>
+
+                            <div class="col-md-9 d-flex justify-content-center width_item">
+                            <textarea class="textarea_input" placeholder="Enter message"
+                                      type="text" id="message-content"
+                                      rows="3" cols="110" required></textarea>
+                            </div>
+
+                            <div class="col-md-3 d-flex justify-content-center width_item">
+                                <button class="send m-2" type="submit" id="send-message">Send</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!--Connected users-->
+                <div class="users col-lg-3 offset-lg-1 mt-4">
+
+                    <ul class="list-group">
+                        <div class="text-center">
+                            <li class="user list-group-item p-3">
+                                <h2>Connected Users</h2></li>
+                        </div>
+
+                        <div id="connected-users">
+
+                        </div>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

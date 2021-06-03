@@ -1,0 +1,145 @@
+:root {
+    --purple: #8B008B;
+    --white: #ffffff;
+    --red: #FF0000;
+    --black: #0e1111;
+    --my_message: #e2ffe8;
+    --others_message: #e2f6ff;
+    --color_chat:#e7d0ef;
+    --color-background:#d8e1f6;
+
+    background-color: var(--color-background);
+}
+
+/* background web */
+.main-background {
+    background-color: var(--color-background);
+}
+
+/* logout button */
+.logout {
+    font-size:24px;
+    color:var(--red);
+    background-color: var(--white);
+    border: none;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    outline:none;
+}
+
+.logout:focus{
+    outline: none;
+}
+
+/* search button */
+.search{
+    font-size:24px;
+    color: var(--black);
+    background-color: var(--purple);
+    border: none;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    outline:none;
+}
+
+.search:focus{
+    outline: none;
+}
+
+/* title */
+.title_welcome {
+    background-color: var(--purple);
+    border-radius: 25px;
+    color: var(--white);
+    height: 100%;
+}
+
+.second_row {
+}
+
+.chat_section {
+    background-color: var(--color_chat);
+    border-radius: 15px;
+}
+
+/* style messages */
+.messages {
+    width: 100%;
+}
+
+.chat_left {
+    border: none;
+    background: var(--my_message);
+    font-size: 15px;
+    border-radius: 25px
+}
+
+.chat_right {
+    border: none;
+    background: var(--others_message);
+    font-size: 15px;
+    border-radius: 25px
+}
+
+/* send button */
+.send{
+    background-color: var(--purple);
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 15px 35px;
+    color: var(--white);
+}
+
+.send:hover {
+    background-color: var(--white);
+    border-color: var(--purple);
+    color: var(--purple);
+}
+
+.send:focus {
+    outline: none;
+}
+
+.width_item {
+    width: 100%;
+}
+
+.textarea_input {
+    border-radius: 25px;
+    padding: 12px 30px;
+    background-color: aliceblue;
+}
+
+.textarea_input:focus {
+    border-width: 3px;
+    outline: none;
+}
+
+/* users */
+.users {
+    border-radius: 15px;
+    background-color: white;
+}
+
+.user{
+    padding: 30px;
+    border: 1px solid var(--white) !important;
+}
+
+.user > img {
+    border-radius: 50%;
+}
+
+
+
+
