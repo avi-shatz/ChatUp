@@ -1,5 +1,7 @@
 # ChatUp
-A nice public chat website with server side written in Java Spring
+A public chat website.
+Server side - Java and Spring framewrok
+Client side - Html, Css and JavaScript
 
 
 
